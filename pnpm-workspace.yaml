@@ -1,0 +1,5 @@
+packages:
+  - "frontend/client"
+
+allowBuilds:
+  core-js: true

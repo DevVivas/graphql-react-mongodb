@@ -1,0 +1,23 @@
+type Query {
+    mensajes: [Mensaje!]
+    obtenerMensaje(id: ID!): Mensaje
+}
+
+type Mensaje {
+    _id: ID!,
+    titulo: String!,
+    contenido: String!,
+    autor: String!
+}
+
+type Mutation {
+    crearMensaje(
+        titulo: String!, 
+        contenido: String,
+        autor: String
+    ): Mensaje
+
+    eliminarTarea(
+        id: ID!
+    ): String
+}

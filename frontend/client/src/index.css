@@ -1,0 +1,234 @@
+:root {
+	--ink: #1358a2;
+	--forest: #172446;
+	--muted: #172446;
+	--paper: #ffffff;
+	--line: #ffffff;
+	--coral: #ffffff;
+	--gold: #172446;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	color: var(--ink);
+	background-color: var(--paper);
+	background-image: radial-gradient(#0615a0 0.7px, transparent 0.7px);
+	background-size: 18px 18px;
+	font-family: "Trebuchet MS", "Aptos", sans-serif;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+.navbar.bg-body-tertiary {
+	padding: 13px max(24px, calc((100vw - 1120px) / 2));
+	background: var(--forest) !important;
+	border-bottom: 4px solid var(--coral);
+}
+
+.navbar .navbar-brand {
+	color: #fff;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+	color: var(--gold);
+}
+
+.navbar .navbar-nav .nav-link {
+	padding: 10px 14px;
+	color: #dce8df;
+	font-size: 14px;
+	transition: color 150ms ease;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+	color: var(--gold);
+}
+
+.container.p-4 {
+	width: min(100% - 40px, 900px);
+	max-width: 900px;
+	padding: 48px 0 76px !important;
+}
+
+.fila {
+	display: flex;
+	justify-content: center;
+}
+
+.fila > .col-md-6 {
+	width: min(100%, 760px);
+	max-width: 760px;
+	flex: 0 1 760px;
+	margin: 0 auto;
+}
+
+.fila .card {
+	position: relative;
+	margin: 0 0 15px !important;
+	padding: 22px 24px 18px;
+	overflow-wrap: anywhere;
+	background: #9e9e9e29;
+	border: 1px solid var(--line);
+	border-top: 3px solid var(--forest);
+	border-radius: 5px;
+	box-shadow: 0 5px 16px rgb(33 55 47 / 5%);
+	transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.fila .card:nth-child(3n + 2) {
+	border-top-color: var(--coral);
+}
+
+.fila .card:nth-child(3n) {
+	border-top-color: #d5a638;
+}
+
+.fila .card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 9px 22px rgb(33 55 47 / 9%);
+}
+
+.fila .card h4 {
+	margin: 0 0 10px;
+	color: var(--forest);
+	font-family: Georgia, "Palatino Linotype", serif;
+	font-size: 23px;
+	font-weight: 400;
+}
+
+.fila .card p {
+	margin: 0;
+	color: #56665d;
+	font-size: 14px;
+	line-height: 1.65;
+	white-space: pre-wrap;
+}
+
+.fila .card p + p {
+	margin-top: 15px;
+	padding-top: 12px;
+	color: var(--muted);
+	border-top: 1px solid #edf1ec;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.row > .col-md-6.offset-md-4 {
+	width: min(100%, 620px);
+	max-width: 620px;
+	flex: 0 1 620px;
+	margin: 0 auto;
+}
+
+.row .card {
+	padding: 8px;
+	background: #fff;
+	border: 1px solid var(--line);
+	border-radius: 5px;
+	box-shadow: 0 8px 24px rgb(33 55 47 / 7%);
+}
+
+.row .card-body {
+	padding: 24px;
+}
+
+.row .form-group + .form-group {
+	margin-top: 16px;
+}
+
+.row .form-control {
+	min-height: 46px;
+	padding: 11px 13px;
+	color: var(--ink);
+	background-color: #fbfcfa;
+	border-color: #cbd7cd;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.row textarea.form-control {
+	min-height: 125px;
+}
+
+.row .form-control:focus {
+	border-color: var(--forest);
+	box-shadow: 0 0 0 3px rgb(23 70 61 / 12%);
+}
+
+.row .btn-success {
+	min-height: 45px;
+	margin-top: 18px;
+	padding: 10px 19px;
+	color: #fff;
+	background: var(--forest);
+	border-color: var(--forest);
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.row .btn-success:hover,
+.row .btn-success:focus {
+	background: #246453;
+	border-color: #246453;
+}
+
+@media (max-width: 767px) {
+	.navbar.bg-body-tertiary {
+		padding: 12px 16px;
+	}
+
+	.navbar .container-fluid {
+		align-items: center;
+	}
+
+	.navbar .navbar-collapse {
+		flex-basis: 100%;
+	}
+
+	.navbar .navbar-nav {
+		padding-top: 8px;
+	}
+
+	.navbar .navbar-toggler {
+		border-color: rgb(255 255 255 / 35%);
+	}
+
+	.navbar .navbar-toggler-icon {
+		filter: brightness(0) invert(1);
+	}
+
+	.container.p-4 {
+		width: calc(100% - 32px);
+		padding-top: 30px !important;
+	}
+
+	.fila > .col-md-6,
+	.row > .col-md-6.offset-md-4 {
+		width: 100%;
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+
+	.fila .card {
+		padding: 19px 18px 16px;
+	}
+
+	.row .card-body {
+		padding: 16px;
+	}
+}
